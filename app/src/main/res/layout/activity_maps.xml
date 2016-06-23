@@ -1,0 +1,164 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.andre_000.terragoprototype1.MapsActivity" >
+        </fragment>
+
+
+
+
+    <!-- Map and List buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center|top"
+        android:background="@drawable/border"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/mapsBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Map"
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimary"
+            android:focusable="true"
+            android:background="#ffffff"
+            />
+        <View
+            android:id="@+id/VerticalLine"
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:background="#aaa" />
+        <Button
+            android:id="@+id/listBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="List"
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimary"
+            android:background="#ffffff"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_marginTop="45dp"
+        android:layout_gravity="center|top">
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/multiple_actions_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        fab:fab_addButtonColorNormal="#f3f3f3"
+        fab:fab_addButtonColorPressed="#ece9e1"
+        fab:fab_addButtonSize="mini"
+        fab:fab_addButtonPlusIconColor="@color/colorPrimary"
+        fab:fab_addButtonStrokeVisible="false"
+        fab:fab_expandDirection="right"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="start|top">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="#f3f3f3"
+            fab:fab_colorPressed="#ece9e1"
+            fab:fab_size="mini"
+            fab:fab_icon="@drawable/cluster"
+            />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="#f3f3f3"
+            fab:fab_colorPressed="#ece9e1"
+            fab:fab_size="mini"
+            fab:fab_icon="@drawable/cloud"
+            />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="#f3f3f3"
+            fab:fab_colorPressed="#ece9e1"
+            fab:fab_size="mini"
+            fab:fab_icon="@drawable/location"/>
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="#f3f3f3"
+            fab:fab_colorPressed="#ece9e1"
+            fab:fab_size="mini"
+            fab:fab_icon="@drawable/places_ic_search"/>
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_gravity="center_horizontal|bottom">
+    <!-- GPS Status -->
+    <ImageView
+        android:id="@+id/gpsStatus"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:layout_weight="1"
+        android:scaleType="fitXY"
+        android:background="@drawable/border"
+        android:src="@drawable/statusbar" />
+    </LinearLayout>
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/multiple_actions_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        fab:fab_addButtonColorNormal="@color/colorPrimary"
+        fab:fab_addButtonColorPressed="@color/colorPrimaryDark"
+        fab:fab_addButtonSize="normal"
+        fab:fab_addButtonPlusIconColor="#fff"
+        fab:fab_addButtonStrokeVisible="false"
+        fab:fab_expandDirection="up"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="10dp"
+        android:layout_gravity="end|bottom">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="#f3f3f3"
+            fab:fab_colorPressed="#ece9e1"
+            fab:fab_size="mini"
+            fab:fab_icon="@drawable/cloud"
+            />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="#f3f3f3"
+            fab:fab_colorPressed="#ece9e1"
+            fab:fab_size="mini"
+            fab:fab_icon="@drawable/location"/>
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="#f3f3f3"
+            fab:fab_colorPressed="#ece9e1"
+            fab:fab_size="mini"
+            fab:fab_icon="@drawable/search"/>
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+</FrameLayout>
